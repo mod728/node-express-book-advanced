@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400&display=swap');
+
+/* Common style */
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 300;
+    color: #333;
+}
+
+main{  
+    max-width: 100rem; 
+    margin-top: 2rem;
+    margin-right: auto; 
+    margin-left:  auto;
+    padding-right: 3rem; 
+    padding-left:  3rem;
+}
+
+h1{
+    font-size: 3rem;
+    font-weight: 400;
+    line-height: 3.5rem;
+}
+
+h2{
+    font-size: 2.4rem;
+    font-weight: 400;
+    line-height: 3rem;
+}
+
+p{
+    font-size: 1.8rem;
+    line-height: 3.5rem;
+    margin-bottom: 1.4rem;
+}
+
+a{
+    text-decoration: none;
+}
+
+/* Header */
+header > * > img{
+    width: 80%;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Index */
+.grid-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+@media(max-width: 600px){ 
+    .grid-container{
+        grid-template-columns: 1fr;
+    }
+} 
+
+.card{
+    border-radius: 1rem;
+    width: 99.5%;
+    backdrop-filter: blur(2rem);
+    box-shadow: 0.4rem 0.4rem 1.3rem 0.5rem rgba(0,0,0,0.25);
+}
+
+.card > a:hover{
+    opacity: 0.7;
+}
+
+.card > a > img{
+    width: 100%;
+    border-radius: 1rem 1rem 0 0; 
+}
+
+.texts-area{
+    padding: 1.5rem 1.5rem;
+    color: #333;
+}
+
+.bottom{
+    text-align: center;
+    margin-top: 4rem;
+}
+
+.create-button{
+    background: linear-gradient(135deg,#f29100,rgba(199, 13, 0, 0.8));
+    border: none;
+    border-radius: 1.6rem;
+    color: white;
+    padding: 1.2rem 7.2rem;
+    display: inline-block;
+    font-size: 1.8rem;
+}
+
+.login-button{
+    background: linear-gradient(135deg,#00baf2,rgba(73, 0, 199, 0.8));
+    border: none;
+    border-radius: 1.6rem 0 0 1.6rem;
+    color: white;
+    padding: 1.2rem 7.2rem;
+    display: inline-block;
+    font-size: 1.8rem;
+}
+
+.user-create-button{
+    background: linear-gradient(135deg,#d2f200,rgba(199, 0, 152, 0.8));
+    border: none;
+    border-radius: 0 1.6rem 1.6rem 0;
+    color: white;
+    padding: 1.2rem 7.2rem;
+    display: inline-block;
+    font-size: 1.8rem;
+}
+
+@media(max-width: 600px){ 
+    .login-button{
+        display: block;
+        border-radius: 1.6rem;
+        margin-bottom: 1rem;
+    }
+    .user-create-button{
+        display: block;
+        border-radius: 1.6rem;
+    }
+} 
+
+/* blogCreate */
+.blog-create > h1{
+    margin-bottom: 3rem;
+}
+
+label{
+    font-size: 1.8rem;
+    line-height: 2.5rem;
+}
+
+input, textarea{
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 2rem;
+    border: 0.1rem solid #ccc;
+    border-radius: 0.5rem;
+    box-sizing: border-box;
+    resize: vertical;
+    font-size: 1.6rem;;
+    letter-spacing: 0;
+  }
+  
+button{
+    background-color: #858585;
+    font-size: 1.6rem;;
+    color: white;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    width: 100%;
+}
+  
+button:hover{
+    opacity: 0.8;
+    background: linear-gradient(135deg,#0061f2,rgba(105,0,199,.8));
+}
+
+/* blogDelete */
+.blog-delete > * > h1{
+    margin-bottom: 2rem;
+}
+
+.blog-delete > * > img{
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.blog-delete > * > button{
+    margin-top: 2rem;
+}
+
+/* blogRead */
+.blog-read{
+    background-color: #fff;
+    border-radius: 1.6rem;
+    box-shadow: rgba(30, 4, 4, 0.271) 0 0 1rem 0;
+    padding: 6rem;
+}
+
+.blog-read > img{
+    width: 100%;
+    margin-bottom: 3rem;
+}
+
+.blog-read > h1{
+    background-color: rgb(60, 60, 60);
+    color: #fff;
+    padding: 1rem 1rem 1rem 1.5rem;
+}
+
+.update-button{
+    background: linear-gradient(135deg,#f29100,rgba(199, 13, 0, 0.8));
+    border: none;
+    border-radius: 1.6rem 0 0 1.6rem;
+    color: white;
+    padding: 1.2rem 7.2rem;
+    display: inline-block;
+    font-size: 1.8rem;
+}
+
+.delete-button{
+    background: linear-gradient(135deg,#0061f2,rgba(105,0,199,.8));
+    border: none;
+    border-radius: 0 1.6rem 1.6rem 0;
+    color: white;
+    padding: 1.2rem 7.2rem;
+    display: inline-block;
+    font-size: 1.8rem;
+}
+
+@media(max-width: 600px){ 
+    .update-button{
+        display: block;
+        border-radius: 1.6rem;
+        margin-bottom: 1rem;
+    }
+    .delete-button{
+        display: block;
+        border-radius: 1.6rem;
+    }
+} 
+
+/* Error */
+.error > h1{
+    margin-bottom: 3rem;
+}
+
+.error > p{
+    display: inline-block;
+    padding: 0.2rem 3rem 0.4rem 1rem;
+    color: #fff;
+    border-radius: 0 1.6rem 1.6rem 0;
+    background-color: rgb(255, 56, 56);
+}
+
+/* Login */
+.login > h1{
+    margin-bottom: 3rem;
+}
+
+.login > div > form > button{
+    margin-top: 1rem;
+}    
+
+/* userCreate */
+.user-create > h1{
+    margin-bottom: 3rem;
+}
+
+.user-create > div > form > button{
+    margin-top: 1.5rem;
+}   
+
+/* Footer */
+footer{
+    text-align: center;
+    margin-top: 2rem;
+}
