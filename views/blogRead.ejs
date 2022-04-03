@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <title><%= singleBlog.title %></title>
+    <%- include("./head"); %> 
+</head>
+<body>
+    <%- include("./header"); %>
+    <main>
+    <div class="blog-read">
+        <h1><%= singleBlog.title %></h1>
+        <img src="/public/images<%= singleBlog.image %>" alt="blog-image"/>
+        <p><%= singleBlog.textBody %></p>
+    </div>
+    <div class="bottom">
+        <% if(session !== undefined){ %>
+          <a href="/blog/update/<%= singleBlog._id %>" class="update-button">編集</a>
+        <% } %>
+        <% if(session !== undefined){ %>
+          <a href="/blog/delete/<%= singleBlog._id %>" class="delete-button">削除</a>
+        <% } %>
+    </div>
+    </main>
+    <%- include("./footer"); %>
+</body>
+</html>

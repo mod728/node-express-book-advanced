@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <title>ブログ作成ページ</title>
+  <%- include("./head"); %>
+</head>
+<body>
+<%- include("./header"); %>
+<main>
+  <div class="blog-create">
+    <h1>記事を書く</h1>
+    <div>
+      <form action="/blog/create" method="POST">
+        <label for="title">タイトル</label>  
+        <input type="text" name="title" required>
+        <label for="summary">要約</label>
+        <input type="text" name="summary" required>
+        <label for="image">イメージ</label>
+        <input type="text" name="image" placeholder="/img1.jpg" required>
+        <label for="textBody">本文</label>
+        <textarea name="textBody" rows="15" required></textarea>
+        <br/> 
+        <button type="submit">投稿</button>
+      </form>
+    </div>
+  </div>
+</main>
+<%- include("./footer"); %>
+</body>
+</html>
